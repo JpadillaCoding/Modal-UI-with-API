@@ -23,7 +23,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <div>
+    <div className='main-wrapper'>
       <Nav />
       {
         nasaInfo.collection
