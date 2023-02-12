@@ -40,10 +40,15 @@ nasaInfo.collection && (currentPost =
   return (
     <div className='main-wrapper'>
       <Nav />
-      {
-      nasaInfo.collection &&
+      {nasaInfo.collection && 
         <ItemsList nasaInfo={currentPost} />
       }
+      {nasaInfo.collection && 
+      <UsePagination data={nasaInfo.collection} 
+      setCurrentPage={setCurrentPage}
+      postPerPage={postPerPage}/>
+      }
+      
     </div>
   );
 }
