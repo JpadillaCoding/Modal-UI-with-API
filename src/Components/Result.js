@@ -23,7 +23,7 @@ function Result(props) {
         <div className="nasaInfo-item">
             <img src={image} onClick={toggleModal}/>
             {modal && (
-            <div className="modal fade-in">
+            <div className="modal">
                 <div className="overlay" onClick={toggleModal}></div>
                 <div className="modal-content">
                     <div className="modal-header">
@@ -33,9 +33,23 @@ function Result(props) {
                         </button>
                     </div>
                     <div className="modal-body">
-                        <img className="img-responsive" src={image}/>
+                        <img className="img-fluid" src={image}/>
                         <div>
-
+                            <div>
+                                <h6 className="modal-description">{info.description}</h6>
+                            </div>
+                            <div>
+                                <h6>Date Created: </h6>
+                                <p className="modal-date">{info.date_created}</p>
+                            </div>
+                            <div>
+                                <h6>Center:</h6>
+                                <p className="modal-center">{info.center}</p>
+                            </div>
+                            <div>
+                                <h6>Secondary creator(s):</h6>
+                                <p className="modal-creators">{info.secondary_creator}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

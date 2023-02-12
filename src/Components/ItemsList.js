@@ -11,6 +11,7 @@ function ItemsList(props) {
         return <Result  data={item} key={index}/>
 
     })
+    console.log(dataArg)
 
     return(
         <div className="contentWrapper">
