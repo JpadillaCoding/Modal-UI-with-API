@@ -23,18 +23,24 @@ function Result(props) {
         <div className="nasaInfo-item">
             <img src={image} onClick={toggleModal}/>
             {modal && (
-            <div className="modal">
+            <div className="modal fade-in">
                 <div className="overlay" onClick={toggleModal}></div>
                 <div className="modal-content">
-                    <h1>{info.title}</h1>
-                    <h2>{info.description}</h2>
-                    <img src={image}/>
-                    <button onClick={toggleModal}>X</button>
+                    <div className="modal-header">
+                        <h5 className="modal-title">{info.title}</h5>
+                        <button type="button" className="close" onClick={toggleModal}>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div className="modal-body">
+                        <img className="img-responsive" src={image}/>
+                        <div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            )
-            }
+            )}
         </div>
     )
 }

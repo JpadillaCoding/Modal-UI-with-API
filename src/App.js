@@ -25,10 +25,8 @@ useEffect(() => {
   return (
     <div className='main-wrapper'>
       <Nav />
-      {
-        nasaInfo.collection
-        &&
-        <ItemsList nasaInfo={nasaInfo.collection}/>
+      {nasaInfo.collection &&
+        <ItemsList nasaInfo={nasaInfo.collection} />
       }
     </div>
   );
