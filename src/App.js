@@ -44,9 +44,12 @@ nasaInfo.collection && (currentPost =
         <ItemsList nasaInfo={currentPost} />
       }
       {nasaInfo.collection && 
-      <UsePagination data={nasaInfo.collection} 
-      setCurrentPage={setCurrentPage}
-      postPerPage={postPerPage}/>
+      <ul className='pagination pagination-lg'>
+        <UsePagination data={nasaInfo.collection} 
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+        postPerPage={postPerPage}/>
+      </ul>
       }
       
     </div>
