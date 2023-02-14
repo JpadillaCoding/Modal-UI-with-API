@@ -44,12 +44,12 @@ nasaInfo.collection && (currentPost =
         <ItemsList nasaInfo={currentPost} />
       }
       {nasaInfo.collection && 
-      <ul className='pagination pagination-lg'>
+      <div>
         <UsePagination data={nasaInfo.collection} 
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
         postPerPage={postPerPage}/>
-      </ul>
+      </div>
       }
       
     </div>
