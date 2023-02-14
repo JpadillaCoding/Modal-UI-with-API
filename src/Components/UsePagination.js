@@ -8,13 +8,14 @@ function UsePagination({data, postPerPage, setCurrentPage, currentPage}) {
         pages.push(i)
     }
     function previous() {
-        if(currentPage > 0) {
-            console.log(currentPage)
+        console.log(currentPage)
+        if(currentPage > 1) {
             setCurrentPage(currentPage-1)
         }
     }
     function next() {
-        if(currentPage < pages.length+1) {
+        console.log(currentPage,pages.length)
+        if(currentPage < pages.length) {
             setCurrentPage(currentPage+1)
         }
     }
