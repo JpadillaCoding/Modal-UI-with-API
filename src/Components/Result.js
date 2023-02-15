@@ -25,7 +25,7 @@ function Result(props) {
             {modal && (
             <div className="modal">
                 <div className="overlay" onClick={toggleModal}></div>
-                <div className="modal-content">
+                <div className="modal-box-wrapper">
                     <div className="modal-header">
                         <h5 className="modal-title">{info.title}</h5>
                         <button type="button" className="close" onClick={toggleModal}>
@@ -34,7 +34,7 @@ function Result(props) {
                     </div>
                     <div className="modal-body">
                         <img className="img-fluid" src={image}/>
-                        <div>
+                        <div className="modal-info-wrapper">
                             <div>
                                 <h6 className="modal-description">{info.description}</h6>
                             </div>
