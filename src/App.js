@@ -3,7 +3,6 @@ import './App.css';
 import Nav from "./Components/Layout.js"
 import ItemsList from './Components/ItemsList.js';
 import UsePagination from "./Components/UsePagination.js"
-// key = TR0olj5zhUcYkIIXzdpmOoIeAeesADDTd9KXQsuY
 
 
 function App() {

@@ -1,5 +1,4 @@
 import React from "react";
-// import Modal from "./Modal.js"
 import { useState } from "react";
 
 function Result(props) {
@@ -21,7 +20,7 @@ function Result(props) {
 
     return(
         <div className="nasaInfo-item">
-            <img src={image} onClick={toggleModal}/>
+            <img src={image} onClick={toggleModal} className="nasaInfo-img"/>
             {modal && (
             <div className="modal">
                 <div className="overlay" onClick={toggleModal}></div>
@@ -33,7 +32,7 @@ function Result(props) {
                         </button>
                     </div>
                     <div className="modal-body">
-                        <img className="img-fluid" src={image}/>
+                        <img className="modal-img" src={image}/>
                         <div className="modal-info-wrapper">
                             <div>
                                 <h6 className="modal-description">{info.description}</h6>
