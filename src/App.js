@@ -3,13 +3,13 @@ import './App.css';
 import Nav from "./Components/Layout.js"
 import ItemsList from './Components/ItemsList.js';
 import UsePagination from "./Components/UsePagination.js"
+import Search from './Components/Search.js';
 
 
 function App() {
 
-const nasaData = "https://images-api.nasa.gov/search?q=hubble&media_type=image"
 
-
+const [nasaData, setNasaData] = useState("https://images-api.nasa.gov/search?q=hubble&media_type=image")
 const [nasaInfo, setNasaInfo] = useState([])
 const [currentPage, setCurrentPage] = useState(1)
 const [postPerPage, setPostPerPage] = useState(20)
@@ -39,6 +39,7 @@ nasaInfo.collection && (currentPost =
   return (
     <div className='main-wrapper'>
       <Nav />
+      <Search setNasaData={setNasaData}/>
       {nasaInfo.collection && 
         <ItemsList nasaInfo={currentPost} />
       }

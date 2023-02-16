@@ -22,16 +22,16 @@ function UsePagination({data, postPerPage, setCurrentPage, currentPage}) {
 
     return (
         <div className="pagination-btns">
-            <button className="btn btn-secondary"
+            <button className="btn btn-dark"
             onClick={previous}>{previousBtn}</button>
             {
                 pages.map((page, index) => {
-                    return <button className="btn btn-secondary"
+                    return <button className="btn btn-dark"
                     onClick={() => setCurrentPage(page)} 
                     key={index}>{page}</button>
                 })
             }
-            <button className="btn btn-secondary"
+            <button className="btn btn-dark"
             onClick={next}>{nextBtn}</button>
         </div>
     )

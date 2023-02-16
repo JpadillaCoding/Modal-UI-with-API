@@ -2,6 +2,7 @@ body.noScroll {
     overflow-y: hidden;
 }
 
+
 .contentWrapper {
     display: flex;
     justify-content: center;
@@ -43,7 +44,9 @@ body.noScroll {
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
-    background: #f1f1f1;
+    background: var(--lighter);
+    border: 1px solid white
+    ;
     padding: 14px;
     border-radius: 3px;
     width: 70%;
@@ -84,17 +87,26 @@ body.noScroll {
     .modal-body {
         flex-direction: column;
     }
-    .modal-box-wrapper {
-        height: 80%;
-    }
     .modal-description {
         max-width: 100%;
+    }
+    .modal-img {
+        height: 45%;
+    }
+    .modal-title, .modal-info-wrapper h6, .modal-info-wrapper p{
+        font-size: .8em;
+    }
+    .nasaInfo-img {
+        width: 150px;
+        height: 150px;
     }
 }
 
 @media (max-width:500px) {
     .modal-title, .modal-info-wrapper h6, .modal-info-wrapper p{
-        font-size: .8em;
+        font-size: .7em;
     }
-    
+    .navbar-title {
+        font-size: 2em;
+    }
 }
