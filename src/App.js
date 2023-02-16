@@ -24,7 +24,7 @@ useEffect(() => {
     setNasaInfo(data)
   }
   fetchNasaData()
-}, [])
+}, [nasaData])
 
 const lastPostIndex = currentPage * postPerPage
 const firstPostIndex = lastPostIndex - postPerPage
