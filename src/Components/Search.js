@@ -4,7 +4,7 @@ import "./components.css"
 
 function Search({setNasaData}) {
 
-    const [inputVal, setInputVal] = useState()
+    const [inputVal, setInputVal] = useState("")
 
     function change(event) {
         setInputVal(event.target.value)

@@ -18,12 +18,10 @@ const [postPerPage, setPostPerPage] = useState(20)
 
 
 useEffect(() => {
-
   async function fetchNasaData() {
     const response = await fetch(nasaData);
     const data = await response.json();
     setNasaInfo(data)
-    
   }
   fetchNasaData()
 }, [])
@@ -39,7 +37,7 @@ nasaInfo.collection && (currentPost =
   return (
     <div className='main-wrapper'>
       <Nav />
-      <Search setNasaData={setNasaData}/>
+      <Search setNasaData={setNasaData} />
       {nasaInfo.collection && 
         <ItemsList nasaInfo={currentPost} />
       }

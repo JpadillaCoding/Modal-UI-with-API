@@ -22,6 +22,7 @@ body.noScroll {
 .modal-img {
     height: 50%;
     width: 50%;
+    max-width: 300px;
     object-fit: cover;
     border-radius: 8px;
 }
