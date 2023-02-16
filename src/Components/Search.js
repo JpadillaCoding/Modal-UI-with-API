@@ -1,14 +1,30 @@
 import React from "react";
+import { useState } from "react";
+import "./components.css" 
 
 function Search({setNasaData}) {
 
+    const [inputVal, setInputVal] = useState()
+
+    function change(event) {
+        setInputVal(event.target.value)
+    }
+    function newSearch() {
+        const formattedString = encodeURIComponent(inputVal.trim())
+        setNasaData(`https://images-api.nasa.gov/search?q=${formattedString}&media_type=image`)
+    }
+
     return (
-    <div class="input-group m-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">Button</button>
+        <div className="container">
+            <div class="input-group mb-4 mt-4">
+                <input type="text" class="form-control" placeholder="Search Nasa's Database"
+                value={inputVal} 
+                onChange={change}/>
+                <div class="input-group-append">
+                    <button class="btn btn-dark" type="button" onClick={newSearch}>Button</button>
+                </div>
+            </div>
         </div>
-    </div>
 
     )
 }
