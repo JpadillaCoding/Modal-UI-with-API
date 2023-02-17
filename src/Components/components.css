@@ -1,8 +1,9 @@
 body.noScroll {
     overflow-y: hidden;
 }
-
-
+.navbar-title {
+    cursor: pointer;
+}
 .contentWrapper {
     display: flex;
     justify-content: center;
@@ -88,8 +89,8 @@ body.noScroll {
     flex-direction: column;
 }
 .empty-container img {
-    height: 70%;
-    width: 70%;
+    height: 65%;
+    width: 65%;
     border: 2px solid var(--darker);
     border-radius: 5px;
 }
