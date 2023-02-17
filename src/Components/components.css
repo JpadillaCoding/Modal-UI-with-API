@@ -4,6 +4,11 @@ body.noScroll {
 .navbar-title {
     cursor: pointer;
 }
+.nav-img {
+    height: 70px;
+    width: 70px;
+    margin: 0 20px;
+}
 .contentWrapper {
     display: flex;
     justify-content: center;

@@ -32,24 +32,24 @@ nasaInfo.collection && (currentPost =
 )
 
 
-  return (
-    <div className='main-wrapper'>
-      <Nav setNasaData={setNasaData}/>
-      <Search setNasaData={setNasaData} />
-      {
-        nasaInfo.collection && (
-          <ItemsList nasaInfo={currentPost} />,
-        <div>
-          <UsePagination data={nasaInfo.collection} 
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-          postPerPage={postPerPage}/>
-        </div>
-        )
-      };
-      
+return (
+  <div className='main-wrapper'>
+    <Nav setNasaData={setNasaData}/>
+    <Search setNasaData={setNasaData} />
+    {nasaInfo.collection && 
+      <ItemsList nasaInfo={currentPost} />
+    }
+    {nasaInfo.collection && 
+    <div>
+      <UsePagination data={nasaInfo.collection} 
+      setCurrentPage={setCurrentPage}
+      currentPage={currentPage}
+      postPerPage={postPerPage}/>
     </div>
-  );
+    }
+    
+  </div>
+);
 }
 
 export default App;
