@@ -16,7 +16,8 @@ function Result(props) {
     }
     else {
         document.body.classList.remove("noScroll")
-    }
+    }   
+    const secondaryCreator = info.secondary_creator
 
     return(
         <div className="nasaInfo-item">
@@ -45,10 +46,12 @@ function Result(props) {
                                 <h6>Center:</h6>
                                 <p className="modal-center">{info.center}</p>
                             </div>
-                            <div>
-                                <h6>Secondary creator(s):</h6>
-                                <p className="modal-creators">{info.secondary_creator}</p>
-                            </div>
+                            {secondaryCreator ? (
+                                <div>
+                                    <h6>Secondary creator(s):</h6>
+                                    <p className="modal-creators">{info.secondary_creator}</p>
+                                </div>
+                            ): (null)}
                         </div>
                     </div>
                 </div>

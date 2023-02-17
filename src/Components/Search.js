@@ -21,13 +21,13 @@ function Search({setNasaData}) {
 
     return (
         <div className="container">
-            <div class="input-group mb-4 mt-4">
-                <input type="text" class="form-control" placeholder="Search Nasa's Database"
+            <div className="input-group mb-4 mt-4">
+                <input type="text" className="form-control" placeholder="Search Nasa's Database"
                 value={inputVal} 
                 onChange={change}
                 onKeyDown={handleEnter}/>
-                <div class="input-group-append">
-                    <button class="btn btn-dark" type="button" onClick={newSearch}>Search</button>
+                <div className="input-group-append">
+                    <button className="btn btn-dark" type="button" onClick={newSearch}>Search</button>
                 </div>
             </div>
         </div>

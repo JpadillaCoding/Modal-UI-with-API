@@ -36,7 +36,7 @@ nasaInfo.collection && (currentPost =
 
   return (
     <div className='main-wrapper'>
-      <Nav />
+      <Nav setNasaData={setNasaData}/>
       <Search setNasaData={setNasaData} />
       {nasaInfo.collection && 
         <ItemsList nasaInfo={currentPost} />
