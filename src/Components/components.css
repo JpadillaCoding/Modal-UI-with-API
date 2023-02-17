@@ -124,10 +124,14 @@ body.noScroll {
     .modal-title, .modal-info-wrapper h6, .modal-info-wrapper p{
         font-size: .7em;
     }
+    .navbar {
+        justify-content: center;
+    }
     .navbar-title {
         font-size: 1.7em;
     }
     .empty-container h1 {
         font-size: 1.7em;
     }
+    
 }

@@ -27,7 +27,7 @@ function Search({setNasaData}) {
                 onChange={change}
                 onKeyDown={handleEnter}/>
                 <div className="input-group-append">
-                    <button className="btn btn-dark" type="button" onClick={newSearch}>Search</button>
+                    <button className="btn btn-secondary" type="button" onClick={newSearch}>Search</button>
                 </div>
             </div>
         </div>
