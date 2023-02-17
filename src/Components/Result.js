@@ -22,6 +22,7 @@ function Result(props) {
     return(
         <div className="nasaInfo-item">
             <img src={image} onClick={toggleModal} className="nasaInfo-img"/>
+
             {modal && (
             <div className="modal">
                 <div className="overlay" onClick={toggleModal}></div>
@@ -46,6 +47,7 @@ function Result(props) {
                                 <h6>Center:</h6>
                                 <p className="modal-center">{info.center}</p>
                             </div>
+
                             {secondaryCreator ? (
                                 <div>
                                     <h6>Secondary creator(s):</h6>
@@ -56,7 +58,8 @@ function Result(props) {
                     </div>
                 </div>
             </div>
-            )}
+             )}
+             
         </div>
     )
 }

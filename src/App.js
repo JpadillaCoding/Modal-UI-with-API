@@ -11,11 +11,6 @@ function App() {
 
 const [nasaData, setNasaData] = useState("https://images-api.nasa.gov/search?q=hubble&media_type=image")
 const [nasaInfo, setNasaInfo] = useState([])
-const [currentPage, setCurrentPage] = useState(1)
-const [postPerPage, setPostPerPage] = useState(20)
-
-
-
 
 useEffect(() => {
   async function fetchNasaData() {
@@ -26,6 +21,9 @@ useEffect(() => {
   fetchNasaData()
 }, [nasaData])
 
+
+const [currentPage, setCurrentPage] = useState(1)
+const [postPerPage, setPostPerPage] = useState(20)
 const lastPostIndex = currentPage * postPerPage
 const firstPostIndex = lastPostIndex - postPerPage
 let currentPost = null;
@@ -38,17 +36,17 @@ nasaInfo.collection && (currentPost =
     <div className='main-wrapper'>
       <Nav setNasaData={setNasaData}/>
       <Search setNasaData={setNasaData} />
-      {nasaInfo.collection && 
-        <ItemsList nasaInfo={currentPost} />
-      }
-      {nasaInfo.collection && 
-      <div>
-        <UsePagination data={nasaInfo.collection} 
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-        postPerPage={postPerPage}/>
-      </div>
-      }
+      {
+        nasaInfo.collection && (
+          <ItemsList nasaInfo={currentPost} />,
+        <div>
+          <UsePagination data={nasaInfo.collection} 
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+          postPerPage={postPerPage}/>
+        </div>
+        )
+      };
       
     </div>
   );

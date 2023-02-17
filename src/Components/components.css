@@ -13,7 +13,6 @@ body.noScroll {
     gap: 20px;
     padding: 20px;
 }
-
 .nasaInfo-img{
     height: 250px;
     width: 250px;
@@ -73,7 +72,7 @@ body.noScroll {
     font-weight: lighter;
     max-height: 80px;
     max-width: 400px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .modal p {
     font-weight: lighter;
