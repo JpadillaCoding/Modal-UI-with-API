@@ -14,7 +14,7 @@ curl -G https://images-api.nasa.gov/search
  --data-urlencode "media_type=image" |
  python -m json.tool
 ```
-or fetching with a url 
+or fetching with a URL 
 ```
 "https://images-api.nasa.gov/searchq=apollo%2011description=moon%20landing&media_type=image" 
 ```
@@ -23,12 +23,7 @@ I chose to go with just searching "Hubble" with mediatype=image to make a starte
 ## Pagination 
 
 This was the first time I used the pagination concept in one of my projects, but it was relatively simple once it was done for the first time. 
-There was 4 varibales added to make the pagination component happen. 2 states were added- `currentPage` which dependant on which page button is clicked and `postPerPage`, which is set to 20. Then we just need to know the length od the array of data we have and find the first and last item per page. Since we know each page will use 20 post, 2 variables are used to find first and last. 
-```
-const lastPostIndex = currentPage * postPerPage
-const firstPostIndex = lastPostIndex - postPerPage
-```
-With these varibles we can now declare what is contained on our current page 
+There are 7 variables added to make the pagination component happen. 2 states were added- `currentPage` which is dependent on which page button is clicked and `postPerPage`, which is set to 20. Then we just need to know the length of the array of data we have and find the first and last item per page. Since we know each page will use 20 posts, 2 variables are used to find the first and last. With these variables we can now declare what is contained on our current page 
 ``
 currentPost = nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
 <ItemsList nasaInfo={currentPost} />
