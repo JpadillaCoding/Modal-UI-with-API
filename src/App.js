@@ -3,7 +3,7 @@ import './App.css';
 import Nav from "./Components/Layout.js"
 import ItemsList from './Components/ItemsList.js';
 import UsePagination from "./Components/UsePagination.js"
-import Search from './Components/Search.js';
+
 
 
 function App() {
