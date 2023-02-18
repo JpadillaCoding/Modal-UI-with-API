@@ -1,5 +1,5 @@
 ### Nasa Image API search engine
-Using Nasa's Image and Video Library API, I made a search engine. The API has 4 endpoints- Search, Asset, Metadata, and Captions. Under Search, there are also further options for Images, Videos, and Audio. I chose to stick to using only Search since I wanted this to be an engine showcasing only Images. This project helped me practice fetching data from an API, reading documentation, state control, and also usage of pagination. 
+Using Nasa's Image and Video Library [API](https://api.nasa.gov/), I made a search engine. The API has 4 endpoints- Search, Asset, Metadata, and Captions. Under Search, there are also further options for Images, Videos, and Audio. I chose to stick to using only Search since I wanted this to be an engine showcasing only Images. This project helped me practice fetching data from an API, reading documentation, state control, and also usage of pagination. 
 
 ## Project progression 
 My Initial plan was just to use data from one search and display a portion of the data retrieved. After I got my initial plan complete, I decided to challenge myself a bit by making a search function for the user to be able to retrieve any image on Nasa's database. Once this was complete, pagination was made so the user wouldn't need to scroll so much and add a better user experience.
@@ -23,7 +23,7 @@ I chose to go with just searching "Hubble" with mediatype=image to make a starte
 ## Pagination 
 
 This was the first time I used the pagination concept in one of my projects, but it was relatively simple once it was done for the first time. 
-There are 7 variables added to make the pagination component happen. 2 states were added- `currentPage` which is dependent on which page button is clicked and `postPerPage`, which is set to 20. Then we just need to know the length of the array of data we have and find the first and last item per page. Since we know each page will use 20 posts, 2 variables are used to find the first and last. With these variables we can now declare what is contained on our current page 
+There are 7 variables added to make the pagination component happen. 2 states were added- `currentPage` which is dependent on which page button is clicked and `postPerPage`, which is set to 20. Then we just need to know the length of the array of data we have and find the first and last item per page. Since we know each page will use 20 posts, 2 variables are used to find the first and last. With these variables, we can now declare what is contained on our current page 
 ```
 currentPost = nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
 <ItemsList nasaInfo={currentPost} />
@@ -51,14 +51,14 @@ Since we're already fetching data from the API, the search function was simple t
 
 My first biggest bug was from using object dot notation for the JSON data. This led to getting errors of `Cannot read properties of undefined(items)`. The accessor  This was fixed by adding conditionals.
 ```
-nasaInfo.collection && (currentPost = 
-  nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
-)
+    nasaInfo.collection && (currentPost = 
+    nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
+    )
 ``` 
 
 The second biggest bug I had was figuring out why my search function wasn't working. The problem was within `useEffect`. Since I used closed brackets as the second parameter, it never had anything to go by to know when state was changed. I changed the closed brackets to `[nasaData]`, the state used for our data. 
 
-I also made a (spreadsheet)[https://docs.google.com/spreadsheets/d/1nXqq_d8wXzVukwPlAtf1VmzLszwlMMKOKsvoybejeF4/edit?usp=sharing] of all the problems I came across. This is useful for referring to previous problems I've had on future projects. 
+I also made a [spreadsheet](https://docs.google.com/spreadsheets/d/1nXqq_d8wXzVukwPlAtf1VmzLszwlMMKOKsvoybejeF4/edit?usp=sharing) of all the problems I came across. This is useful for referring to previous problems I've had on future projects. 
 
 //link the api documentation 
 //Post images of intial project
