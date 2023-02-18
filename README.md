@@ -24,7 +24,7 @@ I chose to go with just searching "Hubble" with mediatype=image to make a starte
 
 This was the first time I used the pagination concept in one of my projects, but it was relatively simple once it was done for the first time. 
 There are 7 variables added to make the pagination component happen. 2 states were added- `currentPage` which is dependent on which page button is clicked and `postPerPage`, which is set to 20. Then we just need to know the length of the array of data we have and find the first and last item per page. Since we know each page will use 20 posts, 2 variables are used to find the first and last. With these variables we can now declare what is contained on our current page 
-``
+```
 currentPost = nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
 <ItemsList nasaInfo={currentPost} />
 ```
@@ -40,21 +40,16 @@ pages.map((page, index) => {
                     key={index}>{page}</button>
                 })
 ```
-For the next and previous button, all that has to be done is make functions add and subtract from the current page. They ust need conditionals for min nand max pages. 
+For the next and previous buttons, all that has to be done is to make functions add and subtract from the current page. They just need conditionals for min and max pages. 
 
 
 ## Search all images 
 
-Since we're already fetching data from the API, the search function wa simple to set up. The heart of the code is grabbing the value put into the search bar and using templete literals to plug in the search needed into the url asked for fetch. 
-```
-        const formattedString = encodeURIComponent(inputVal.trim())
-        setNasaData(`https://images-api.nasa.gov/search?q=${formattedString}&media_type=image`)
-```
-JS alrady has a built in function for trimming white space and encoding it in url format. Also didn't have to worry upper and lowercasing since the API takes care of that.
+Since we're already fetching data from the API, the search function was simple to set up. The heart of the code is grabbing the value put into the search bar and using template literals to plug in the search needed into the URL asked for fetch. JS already has a built-in function for trimming white space and encoding it in URL format. Also didn't have to worry upper and lowercasing since the API takes care of that.
 
 ## Complications 
 
-My first biggest bug was from using object dot notation for the json data. This led to getting errors of `Cannot read properties of undefined(items)`. The accessor  This was fixed with adding conditionals.
+My first biggest bug was from using object dot notation for the JSON data. This led to getting errors of `Cannot read properties of undefined(items)`. The accessor  This was fixed by adding conditionals.
 ```
 nasaInfo.collection && (currentPost = 
   nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
