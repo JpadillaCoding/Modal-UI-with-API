@@ -1,4 +1,4 @@
-### Nasa Image API search engine
+# Nasa Image API search engine
 Using Nasa's Image and Video Library [API](https://api.nasa.gov/), I made a search engine. The API has 4 endpoints- Search, Asset, Metadata, and Captions. Under Search, there are also further options for Images, Videos, and Audio. I chose to stick to using only Search since I wanted this to be an engine showcasing only Images. This project helped me practice fetching data from an API, reading documentation, state control, and also usage of pagination. 
 
 ## Project progression 
@@ -6,7 +6,7 @@ My Initial plan was just to use data from one search and display a portion of th
 
 ## Getting started   
 
-the API's search endpoint works by making a request 
+The API's search endpoint works by making a request 
 ```
 curl -G https://images-api.nasa.gov/search
  --data-urlencode "q=apollo 11"
@@ -23,15 +23,15 @@ I chose to go with just searching "Hubble" with mediatype=image to make a starte
 ## Pagination 
 
 This was the first time I used the pagination concept in one of my projects, but it was relatively simple once it was done for the first time. 
-There are 7 variables added to make the pagination component happen. 2 states were added- `currentPage` which is dependent on which page button is clicked and `postPerPage`, which is set to 20. Then we just need to know the length of the array of data we have and find the first and last item per page. Since we know each page will use 20 posts, 2 variables are used to find the first and last. With these variables, we can now declare what is contained on our current page 
+There are 6 variables added to make the pagination component happen. 2 states were added- `currentPage` which is dependent on which page button is clicked and `postPerPage`, which is set to 20. Then we just need to know the length of the array of data we have and find the first and last item per page. Since we know each page will use 20 posts, 2 variables are used to find the first and last. With these variables, we can now declare what is contained in our current page
 ```
 currentPost = nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
 <ItemsList nasaInfo={currentPost} />
 ```
-Now we can make the buttons to scroll per page 
+Now we can make the page buttons
 ```
 let pages = []
-    for(let i = 1; i <= Math.ceil(totalPosts/postPerPage); i++){
+    for(let i = 1; i <= Math.ceil(totalPosts/postPerPage)   ; i++){
         pages.push(i)
     }
 pages.map((page, index) => {

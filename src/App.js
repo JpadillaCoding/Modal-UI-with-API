@@ -3,7 +3,7 @@ import './App.css';
 import Nav from "./Components/Layout.js"
 import ItemsList from './Components/ItemsList.js';
 import UsePagination from "./Components/UsePagination.js"
-
+import Search from './Components/Search.js';
 
 
 function App() {
@@ -35,7 +35,7 @@ nasaInfo.collection && (currentPost =
 return (
   <div className='main-wrapper'>
     <Nav setNasaData={setNasaData}/>
-    {/* <Search setNasaData={setNasaData} /> */}
+    <Search setNasaData={setNasaData} />
     {nasaInfo.collection && 
       <ItemsList nasaInfo={currentPost} />
     }
