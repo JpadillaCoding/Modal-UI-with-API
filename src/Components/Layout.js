@@ -13,7 +13,7 @@ function Nav({setNasaData}) {
             <nav className="navbar navbar-expand-lg bg-dark">
                     <img src={nasa} className="nav-img"/>
                     <h1 className="navbar-title" onClick={navBarClick}>NASA Image Search Engine</h1>
-                    <Search />
+                    <Search setNasaData={setNasaData}/>
             </nav>
         </div>
     )

@@ -91,6 +91,7 @@ body.noScroll {
     justify-self: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 100px;
 }
 .empty-container img {
     height: 65%;
