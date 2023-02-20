@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Modal-UI-with-API/static/css/main.cad9a546.css",
+    "main.js": "/Modal-UI-with-API/static/js/main.a4d65bc8.js",
+    "static/media/empty.gif": "/Modal-UI-with-API/static/media/empty.74608c04051b6ab89284.gif",
+    "static/media/nasa.png": "/Modal-UI-with-API/static/media/nasa.625dc0a464ded12b7ba3.png",
+    "index.html": "/Modal-UI-with-API/index.html",
+    "main.cad9a546.css.map": "/Modal-UI-with-API/static/css/main.cad9a546.css.map",
+    "main.a4d65bc8.js.map": "/Modal-UI-with-API/static/js/main.a4d65bc8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cad9a546.css",
+    "static/js/main.a4d65bc8.js"
+  ]
+}
