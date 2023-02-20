@@ -1,8 +1,8 @@
 # Nasa Image API search engine
-Using Nasa's Image and Video Library [API](https://api.nasa.gov/), I made a search engine. The API has 4 endpoints- Search, Asset, Metadata, and Captions. Under Search, there are also further options for Images, Videos, and Audio. I chose to stick to using only Search since I wanted this to be an engine showcasing only Images. This project helped me practice fetching data from an API, reading documentation, state control, and also usage of pagination. 
+Using Nasa's Image and Video Library [API](https://api.nasa.gov/), I made a search engine. The API has 4 endpoints- Search, Asset, Metadata, and Captions. Under Search, there are also further options for Images, Videos, and Audio. I chose to stick to using only Search since I wanted this to be an engine showcasing only Images. This project helped me practice fetching data from an API, reading documentation, state control, bootstrap, and also usage of pagination. 
 
 ## Project progression 
-My Initial plan was just to use data from one search and display a portion of the data retrieved. After I got my initial plan complete, I decided to challenge myself a bit by making a search function for the user to be able to retrieve any image on Nasa's database. Once this was complete, pagination was made so the user wouldn't need to scroll so much and add a better user experience.
+My Initial plan was just to use data from one search and display a portion of the data retrieved. After I got my initial plan complete, I decided to challenge myself a bit by making a search function for the user to be able to retrieve any image on Nasa's database. Once this was complete, pagination was made so the user wouldn't need to scroll so much and add a better experience.
 
 ## Getting started   
 
@@ -18,7 +18,7 @@ or fetching with a URL
 ```
 "https://images-api.nasa.gov/searchq=apollo%2011description=moon%20landing&media_type=image" 
 ```
-I chose to go with just searching "Hubble" with mediatype=image to make a starter version. I kept it simple with `useEffect` wrapping a `fetch`. useEffect was used to control the data from fetching indefinitely by adding empty brackets as the second parameter, which led to issues covered later on. The amount of data was controlled with `.slice` and only one state variable was used for fetching the data. Styling was kept relatively simple with flexbox and a bit of `Bootstrap`. Bootstrap is a popular CSS framework and for that reason was incorporated into this project via `<script>`.
+I chose to go with just searching "Hubble" with `mediatype=image` to make a starter version. I kept it simple with `useEffect` wrapping a `fetch`. useEffect was used to control the data from fetching indefinitely by adding empty brackets as the second parameter, which led to issues covered later on. The amount of data was controlled with `.slice` and only one state variable was used for fetching the data. Styling was kept relatively simple with flexbox and a bit of `Bootstrap`. Bootstrap is a popular CSS framework and for that reason was incorporated into this project via `<script>`.
 
 ## Pagination 
 
@@ -31,21 +31,31 @@ currentPost = nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex)
 Now we can make the page buttons
 ```
 let pages = []
-    for(let i = 1; i <= Math.ceil(totalPosts/postPerPage)   ; i++){
+    for(let i = 1; i <= Math.ceil(totalPosts/postPerPage); i++)
+    {
         pages.push(i)
     }
-pages.map((page, index) => {
-                    return <button className="btn btn-dark"
-                    onClick={() => {setCurrentPage(page); window.scrollTo(0, 0)}} 
-                    key={index}>{page}</button>
-                })
+pages.map((page, index) => 
+    {
+        return <button className="btn btn-dark"
+        onClick={() => {setCurrentPage(page); window.scrollTo(0, 0)}} 
+        key={index}>{page}</button>
+    })
 ```
 For the next and previous buttons, all that has to be done is to make functions add and subtract from the current page. They just need conditionals for min and max pages. 
 
 
-## Search all images 
+## Search All Images 
 
-Since we're already fetching data from the API, the search function was simple to set up. The heart of the code is grabbing the value put into the search bar and using template literals to plug in the search needed into the URL asked for fetch. JS already has a built-in function for trimming white space and encoding it in URL format. Also didn't have to worry upper and lowercasing since the API takes care of that.
+Since we're already fetching data from the API, the search function was simple to set up. The heart of the code is grabbing the value put into the search bar and using template literals to plug into the fetch request. JS already has a built-in function for trimming white space and encoding it in URL format. Also didn't have to worry upper and lowercasing since the API takes care of that.
+```
+function newSearch() 
+    {
+        const formattedString = encodeURIComponent(inputVal.trim())
+        setNasaData(`https://images-api.nasa.gov/search?q=${formattedString}&media_type=image`)
+    }
+```
+
 
 ## Complications 
 
