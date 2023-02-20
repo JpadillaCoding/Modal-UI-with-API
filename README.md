@@ -59,7 +59,7 @@ function newSearch()
 
 ## Complications 
 
-My first biggest bug was from using object dot notation for the JSON data. This led to getting errors of `Cannot read properties of undefined(items)`. The accessor  This was fixed by adding conditionals.
+My first biggest bug was from using accessors for the JSON data. That led to getting errors of `Cannot read properties of undefined(items)`. This was fixed by adding conditionals.
 ```
     nasaInfo.collection && (currentPost = 
     nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
