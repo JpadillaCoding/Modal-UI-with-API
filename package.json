@@ -1,5 +1,5 @@
 {
-  "homepage": "JPadillaCoding.github.io/Modal-UI-with-API",
+  "homepage": "http://JPadillaCoding.github.io/Modal-UI-with-API",
   "name": "modal-ui-with-api",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +18,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build", "deploy": "gh-pages -d build"
+    "predeploy" : "npm run build",
+  "deploy" : "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
