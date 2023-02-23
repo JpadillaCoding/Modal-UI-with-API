@@ -9,6 +9,14 @@ body.noScroll {
     width: 70px;
     margin: 0 20px;
 }
+.navbar {
+    justify-content: center;
+}
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .contentWrapper {
     display: flex;
     justify-content: center;
@@ -129,7 +137,7 @@ body.noScroll {
         justify-content: center;
     }
     .navbar-title {
-        font-size: 1.7em;
+        font-size: 1.8em;
     }
     .empty-container h1 {
         font-size: 1.7em;

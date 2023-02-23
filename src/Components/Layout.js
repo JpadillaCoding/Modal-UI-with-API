@@ -11,8 +11,10 @@ function Nav({setNasaData}) {
     return(
         <div>
             <nav className="navbar navbar-expand-lg bg-dark">
+                <div className="nav-logo">
                     <img src={nasa} className="nav-img"/>
                     <h1 className="navbar-title" onClick={navBarClick}>NASA Image Search Engine</h1>
+                </div>
                     <Search setNasaData={setNasaData}/>
             </nav>
         </div>
