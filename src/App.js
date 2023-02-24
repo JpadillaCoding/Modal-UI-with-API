@@ -33,7 +33,7 @@ nasaInfo.collection && (currentPost =
 
 return (
   <div className='main-wrapper'>
-    <Nav setNasaData={setNasaData}/>
+    <Nav setNasaData={setNasaData} />
     {nasaInfo.collection && 
       <ItemsList nasaInfo={currentPost} />
     }
@@ -42,7 +42,7 @@ return (
       <UsePagination data={nasaInfo.collection} 
       setCurrentPage={setCurrentPage}
       currentPage={currentPage}
-      postPerPage={postPerPage}/>
+      postPerPage={postPerPage} />
     </div>
     }
     

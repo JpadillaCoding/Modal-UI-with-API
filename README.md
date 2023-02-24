@@ -70,5 +70,7 @@ The second biggest bug I had was figuring out why my search function wasn't work
 
 I also made a [spreadsheet](https://docs.google.com/spreadsheets/d/1nXqq_d8wXzVukwPlAtf1VmzLszwlMMKOKsvoybejeF4/edit?usp=sharing) of all the problems I came across. This is useful for referring to previous problems I've had on future projects. 
 
-//link the api documentation 
-//Post images of intial project
+## Built With
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
