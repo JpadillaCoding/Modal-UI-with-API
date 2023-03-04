@@ -8,13 +8,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-.navbar-title {
-  color: white;
-}
 .main-wrapper {
   min-height: 100vh;
   width: 100vw;
-  background-color: var(--lighter);
+  background-image: linear-gradient(to left bottom, #706f75, #84848a, #999aa0, #afb0b6, #c5c7cc, #c5c7cc, #c5c7cc, #c5c7cc, #afb0b6, #999aa0, #84848a, #706f75);
+
 }
 .pagination-btns {
   padding: 20px;

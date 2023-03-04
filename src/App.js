@@ -8,7 +8,7 @@ import UsePagination from "./Components/UsePagination.js"
 function App() {
 
 
-const [nasaData, setNasaData] = useState("https://images-api.nasa.gov/search?q=hubble&media_type=image")
+const [nasaData, setNasaData] = useState("https://images-api.nasa.gov/search?q=iss&media_type=image")
 const [nasaInfo, setNasaInfo] = useState([])
 
 useEffect(() => {
@@ -18,6 +18,7 @@ useEffect(() => {
     setNasaInfo(data)
   }
   fetchNasaData()
+  setCurrentPage(1)
 }, [nasaData])
 
 
