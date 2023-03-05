@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SpaceSnap/static/css/main.f6458dc6.css",
-    "main.js": "/SpaceSnap/static/js/main.f8281cf9.js",
+    "main.js": "/SpaceSnap/static/js/main.b3eff468.js",
     "static/media/empty.gif": "/SpaceSnap/static/media/empty.74608c04051b6ab89284.gif",
     "static/media/nasa.png": "/SpaceSnap/static/media/nasa.625dc0a464ded12b7ba3.png",
     "index.html": "/SpaceSnap/index.html",
     "main.f6458dc6.css.map": "/SpaceSnap/static/css/main.f6458dc6.css.map",
-    "main.f8281cf9.js.map": "/SpaceSnap/static/js/main.f8281cf9.js.map"
+    "main.b3eff468.js.map": "/SpaceSnap/static/js/main.b3eff468.js.map"
   },
   "entrypoints": [
     "static/css/main.f6458dc6.css",
-    "static/js/main.f8281cf9.js"
+    "static/js/main.b3eff468.js"
   ]
 }
