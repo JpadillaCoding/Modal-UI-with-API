@@ -3,7 +3,8 @@ body.noScroll {
 }
 .navbar-title {
     cursor: pointer;
-    color: #ffffff
+    color: #ffffff;
+    font-style: oblique;
 }
 .nav-img {
     height: 70px;
@@ -13,11 +14,18 @@ body.noScroll {
 .navbar {
     justify-content: center;
     background-color: rgba(49,49,49,0.2);
+    padding: 15px;
 }
 .nav-logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(-12%);
+
+}
+.placeholder {
+    font-style: italic;
+    font-size: 12px;
 }
 .contentWrapper {
     display: flex;
@@ -126,11 +134,12 @@ body.noScroll {
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
+    text-align: center;
 }
 .empty-container img {
     height: 65%;
     width: 65%;
-    border: 2px solid grey;
+    border: 2px solid #626262;
     border-radius: 5px;
 }
 
@@ -169,6 +178,9 @@ body.noScroll {
     }
     .empty-container h1 {
         font-size: 1.7em;
+    }
+    .placeholder {
+        font-size: 9px;
     }
     
 }

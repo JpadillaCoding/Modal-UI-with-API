@@ -1,6 +1,6 @@
 {
-  "name": "nasa-database-search-engine",
-  "homepage": "https://jpadillacoding.github.io/Nasa-Database-search-engine",
+  "name": "SpaceSnap",
+  "homepage": "https://jpadillacoding.github.io/SpaceSnap",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
