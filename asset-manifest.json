@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Nasa-Database-search-engine/static/css/main.ffb4a29c.css",
-    "main.js": "/Nasa-Database-search-engine/static/js/main.236a1d95.js",
-    "static/media/empty.gif": "/Nasa-Database-search-engine/static/media/empty.74608c04051b6ab89284.gif",
-    "static/media/nasa.png": "/Nasa-Database-search-engine/static/media/nasa.625dc0a464ded12b7ba3.png",
-    "index.html": "/Nasa-Database-search-engine/index.html",
-    "main.ffb4a29c.css.map": "/Nasa-Database-search-engine/static/css/main.ffb4a29c.css.map",
-    "main.236a1d95.js.map": "/Nasa-Database-search-engine/static/js/main.236a1d95.js.map"
+    "main.css": "/SpaceSnap/static/css/main.f6458dc6.css",
+    "main.js": "/SpaceSnap/static/js/main.f8281cf9.js",
+    "static/media/empty.gif": "/SpaceSnap/static/media/empty.74608c04051b6ab89284.gif",
+    "static/media/nasa.png": "/SpaceSnap/static/media/nasa.625dc0a464ded12b7ba3.png",
+    "index.html": "/SpaceSnap/index.html",
+    "main.f6458dc6.css.map": "/SpaceSnap/static/css/main.f6458dc6.css.map",
+    "main.f8281cf9.js.map": "/SpaceSnap/static/js/main.f8281cf9.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffb4a29c.css",
-    "static/js/main.236a1d95.js"
+    "static/css/main.f6458dc6.css",
+    "static/js/main.f8281cf9.js"
   ]
 }
