@@ -1,4 +1,5 @@
 import React from "react"
+import "./components.css"
 
 function UsePagination({data, postPerPage, setCurrentPage, currentPage}) {
     let totalPosts = data.items.length
@@ -25,18 +26,18 @@ function UsePagination({data, postPerPage, setCurrentPage, currentPage}) {
 
     return (
         <div className="pagination-btns">
-            <button className="btn btn-dark"
+            <button className="btn btn-grad"
             onClick={previous}>{previousBtn}</button>
 
             {
                 pages.map((page, index) => {
-                    return <button className="btn btn-dark"
+                    return <button className="btn btn-grad"
                     onClick={() => {setCurrentPage(page); window.scrollTo(0, 0)}} 
                     key={index}>{page}</button>
                 })
             }
 
-            <button className="btn btn-dark" onClick={next}>{nextBtn}</button>
+            <button className="btn btn-grad" onClick={next}>{nextBtn}</button>
         </div>
     )
 

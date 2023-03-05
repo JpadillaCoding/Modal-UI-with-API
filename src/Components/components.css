@@ -39,11 +39,12 @@ body.noScroll {
 }
 .modal-img {
     height: 50%;
+    max-height: 55%;
     width: 50%;
     max-width: 300px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 38px, rgba(0, 0, 0, 0.22) 0px 5px 12px;
 }
 .modal, .overlay {
     width: 100vw;
@@ -68,7 +69,7 @@ body.noScroll {
     border-radius: 3px;
     width: 70%;
     max-width: 750px;
-    height: 60%;
+    height: 65%;
     background-image: linear-gradient(to bottom, #706f75, #84848a, #999aa0, #afb0b6, #c5c7cc);
 }
 .modal-header {
@@ -102,7 +103,23 @@ body.noScroll {
 .modal-creators{
     max-height: 60px;
     overflow: scroll;
-}
+}            
+.btn-grad {
+    background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    display: block;
+    }
+
+    .btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    }
 .empty-container {
     display: flex;
     justify-self: center;
@@ -113,7 +130,7 @@ body.noScroll {
 .empty-container img {
     height: 65%;
     width: 65%;
-    border: 2px solid var(--darker);
+    border: 2px solid grey;
     border-radius: 5px;
 }
 

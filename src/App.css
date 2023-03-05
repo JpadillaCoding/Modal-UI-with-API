@@ -1,8 +1,4 @@
-:root {
-  --slategrey: rgb(112,128,144);
-  --lighter: rgb(183,192,200);
-  --darker: rgb(57,64,72);
-}
+
 * {
   padding: 0;
   margin: 0;
