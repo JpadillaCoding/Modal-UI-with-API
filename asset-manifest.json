@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Nasa-Database-search-engine/static/css/main.db576568.css",
-    "main.js": "/Nasa-Database-search-engine/static/js/main.97a2c259.js",
+    "main.css": "/Nasa-Database-search-engine/static/css/main.e24f6d5d.css",
+    "main.js": "/Nasa-Database-search-engine/static/js/main.bd425628.js",
     "static/media/empty.gif": "/Nasa-Database-search-engine/static/media/empty.74608c04051b6ab89284.gif",
     "static/media/nasa.png": "/Nasa-Database-search-engine/static/media/nasa.625dc0a464ded12b7ba3.png",
     "index.html": "/Nasa-Database-search-engine/index.html",
-    "main.db576568.css.map": "/Nasa-Database-search-engine/static/css/main.db576568.css.map",
-    "main.97a2c259.js.map": "/Nasa-Database-search-engine/static/js/main.97a2c259.js.map"
+    "main.e24f6d5d.css.map": "/Nasa-Database-search-engine/static/css/main.e24f6d5d.css.map",
+    "main.bd425628.js.map": "/Nasa-Database-search-engine/static/js/main.bd425628.js.map"
   },
   "entrypoints": [
-    "static/css/main.db576568.css",
-    "static/js/main.97a2c259.js"
+    "static/css/main.e24f6d5d.css",
+    "static/js/main.bd425628.js"
   ]
 }
