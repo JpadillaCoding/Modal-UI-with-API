@@ -21,7 +21,7 @@ function Search({setNasaData}) {
 
     return (
         <div className="container">
-            <div className="input-group mb-2">
+            <div className="input-group">
                 <input type="text" className="form-control placeholder" placeholder="Exploring the Universe through NASA's Database"
                 value={inputVal} 
                 onChange={change}
