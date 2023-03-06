@@ -38,8 +38,8 @@ body.noScroll {
 .nasaInfo-img{
     max-height: 250px;
     max-width: 250px;
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 150px;
+    min-height: 150px;
     /* object-fit: cover; */
     border-radius: 8px;
     cursor: pointer;
@@ -119,15 +119,24 @@ body.noScroll {
     transition: 0.5s;
     background-size: 200% auto;
     color: white;            
-    border-radius: 10px;
+    border-radius: 5px;
     display: block;
-    }
-
-    .btn-grad:hover {
+}
+.btn-grad:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
-    }
+}
+.btn-normal {
+    background-color: #c5c7cc;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #232526;            
+    border-radius: 5px;
+    display: block;
+}
 .empty-container {
     display: flex;
     justify-self: center;

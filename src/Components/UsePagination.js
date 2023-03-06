@@ -31,8 +31,11 @@ function UsePagination({data, postPerPage, setCurrentPage, currentPage}) {
 
             {
                 pages.map((page, index) => {
-                    return <button className="btn btn-grad"
-                    onClick={() => {setCurrentPage(page); window.scrollTo(0, 0)}} 
+                    return <button className="btn btn-normal:current" id={`btn${index+1}`}
+                    onClick={() => {setCurrentPage(page); window.scrollTo(0, 0)
+                        
+                    } 
+                } 
                     key={index}>{page}</button>
                 })
             }
