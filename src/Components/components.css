@@ -127,16 +127,6 @@ body.noScroll {
     color: #fff;
     text-decoration: none;
 }
-.btn-normal {
-    background-color: #c5c7cc;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: #232526;            
-    border-radius: 5px;
-    display: block;
-}
 .empty-container {
     display: flex;
     justify-self: center;

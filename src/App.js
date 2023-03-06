@@ -27,6 +27,7 @@ const [postPerPage, setPostPerPage] = useState(20)
 const lastPostIndex = currentPage * postPerPage
 const firstPostIndex = lastPostIndex - postPerPage
 let currentPost = null;
+
 nasaInfo.collection && (currentPost = 
   nasaInfo.collection.items.slice(firstPostIndex, lastPostIndex) 
 )
