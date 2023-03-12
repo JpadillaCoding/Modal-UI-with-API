@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Nav from "./Components/Layout.js"
+import Nav from "./Components/Nav.js"
 import ItemsList from './Components/ItemsList.js';
 import UsePagination from "./Components/UsePagination.js"
 

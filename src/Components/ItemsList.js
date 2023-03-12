@@ -5,7 +5,8 @@ import empty from "../images/empty.gif"
 
 function ItemsList(props) {
     const dataArg = props.nasaInfo
-    //
+    //dataArg is passed to check if the returned results from the API is 0.
+    //else map through the data and render it into the Result component
     if(dataArg.length == 0) {
         return (
             <div className="empty-container">
