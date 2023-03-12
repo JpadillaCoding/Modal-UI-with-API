@@ -3,7 +3,13 @@ import { useState } from "react";
 import "./components.css" 
 
 function Search({setNasaData}) {
-
+    /*
+    -inputVal changes state to take in the value of what is typed in the search bar everytime a character is added or deleted
+    -handleEnter adds the feature of being able to search with "enter"
+    -newSearch plugs in the value of the search bar into the API request. Since the request is in useEffect's dependency, anytime 
+     NasaDate state is changed then the page will reload with the new data. 
+     -formattedString uses built in features to adjust the users input to fit URL syntax.
+    */
     const [inputVal, setInputVal] = useState("")
 
     function change(event) {

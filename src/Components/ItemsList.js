@@ -5,7 +5,7 @@ import empty from "../images/empty.gif"
 
 function ItemsList(props) {
     const dataArg = props.nasaInfo
-
+    //
     if(dataArg.length == 0) {
         return (
             <div className="empty-container">
