@@ -5,12 +5,12 @@ function Result(props) {
     const data = props.data
     const image = data.links[0].href
     const info = data.data[0]
-
+    //turns modals on and off. All modals are intially set to false and (!modal) toggles the opposite of what the current state is
     const [modal, setModal] = useState(false)
     const toggleModal = () => {
         setModal(!modal)   
     }
-
+    //adds feature of removing scrolling when a modal is popped up.
     if (modal) {
         document.body.classList.add("noScroll")
     }
@@ -22,7 +22,7 @@ function Result(props) {
     return(
         <div className="nasaInfo-item">
             <img src={image} onClick={toggleModal} className="nasaInfo-img"/>
-
+            {/*if modal is true then return the following render of html. */}
             {modal && (
             <div className="modal">
                 <div className="overlay" onClick={toggleModal}></div>
