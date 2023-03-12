@@ -19,7 +19,7 @@ or fetching with a URL
 ```
 "https://images-api.nasa.gov/searchq=apollo%2011description=moon%20landing&media_type=image" 
 ```
-I chose to go with just searching "Hubble" with `mediatype=image` to make a starter version. I kept it simple with `useEffect` wrapping a `fetch`. useEffect was used to control the data from fetching indefinitely by adding empty brackets as the second parameter, which led to issues covered later on. The amount of data was controlled with `.slice` and only one state variable was used for fetching the data. Styling was kept relatively simple with flexbox and a bit of `Bootstrap`. Bootstrap is a popular CSS framework and for that reason was incorporated into this project via `<script>`.
+I chose to go with just searching "ISS" with `mediatype=image` to make a starter version. I kept it simple with `useEffect` wrapping a `fetch`. useEffect was used to control the data from fetching indefinitely by adding empty brackets as the second parameter, which led to issues covered later on. The amount of data was controlled with `.slice` and only one state variable was used for fetching the data. Styling was kept relatively simple with flexbox and a bit of `Bootstrap`. Bootstrap is a popular CSS framework and for that reason was incorporated into this project via `<script>`.
 
 ## Pagination 
 
